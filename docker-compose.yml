@@ -2,11 +2,9 @@ version: '3.7'
 
 services:
   zipcall:
-    build: .
+    image: tajmahal/zipcall
     ports:
       - '3000:3000'
-    networks:
-      - web
     environment:
       - TWILIO_ACCOUNT_SID=YourAccountSIDHere
       - LOCAL_AUTH_TOKEN=YourAuthTokenHere

@@ -6,5 +6,6 @@ services:
     ports:
       - '3000:3000'
     environment:
-      - TWILIO_ACCOUNT_SID=YourAccountSIDHere
-      - LOCAL_AUTH_TOKEN=YourAuthTokenHere
+      - TWILIO_ACCOUNT_SID=${TWILIO_ACCOUNT_SID}
+      - LOCAL_AUTH_TOKEN=${LOCAL_AUTH_TOKEN}
+      - PORT=${PORT}

@@ -68,7 +68,7 @@ var VideoChat = {
     VideoChat.localStream = stream;
     // Add the stream as video's srcObject.
     // Now that we have webcam video sorted, prompt user to share URL
-    Snackbar.show({
+    /*Snackbar.show({
       text: "Here is the join link for your call: " + url,
       actionText: "Copy Link",
       width: "750px",
@@ -89,7 +89,7 @@ var VideoChat = {
         toRemove.parentNode.removeChild(toRemove);
         Snackbar.close();
       },
-    });
+    });*/
     VideoChat.localVideo.srcObject = stream;
     // Now we're ready to join the chat room.
     VideoChat.socket.emit("join", roomHash);

@@ -599,7 +599,7 @@ function requestToggleCaptions() {
   }
   if (receivingCaptions) {
     captionText.text("").fadeOut();
-    captionButtontext.text("Start Live Caption");
+    captionButtontext.text("Démarrer les sous-titres");
     receivingCaptions = false;
   } else {
     Snackbar.show({
@@ -610,7 +610,7 @@ function requestToggleCaptions() {
       actionTextColor: "#616161",
       duration: 10000,
     });
-    captionButtontext.text("End Live Caption");
+    captionButtontext.text("Arrêter les sous-titres");
     receivingCaptions = true;
   }
   // Send request to get captions over data channel
@@ -692,7 +692,7 @@ function recieveCaptions(captions) {
     );
     receivingCaptions = false;
     captionText.text("").fadeOut();
-    captionButtontext.text("Start Live Caption");
+    captionButtontext.text("Démarrer les sous-titres");
     return;
   }
   captionText.text(captions);
@@ -791,13 +791,13 @@ function toggleChat() {
   if (entireChat.is(":visible")) {
     entireChat.fadeOut();
     // Update show chat buttton
-    chatText.text("Show Chat");
+    chatText.text("Montrer Chat");
     chatIcon.classList.remove("fa-comment-slash");
     chatIcon.classList.add("fa-comment");
   } else {
     entireChat.fadeIn();
     // Update show chat buttton
-    chatText.text("Hide Chat");
+    chatText.text("Cacher Chat");
     chatIcon.classList.remove("fa-comment");
     chatIcon.classList.add("fa-comment-slash");
   }
@@ -929,7 +929,7 @@ function startUp() {
   });
 
   // Set caption text on start
-  captionText.text("Waiting for other user to join...").fadeIn();
+  captionText.text("En attente du second utilisateur...").fadeIn();
 
   // Reposition captions on start
   rePositionCaptions();

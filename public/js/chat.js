@@ -913,7 +913,7 @@ function startUp() {
   _delay = setInterval(delayCheck, 500);
 
   // Show accept webcam snackbar
-  Snackbar.show({
+  /*Snackbar.show({
     text: "Please allow microphone and webcam access",
     actionText: "Show Me How",
     width: "455px",
@@ -926,7 +926,7 @@ function startUp() {
         "_blank"
       );
     },
-  });
+  });*/
 
   // Set caption text on start
   captionText.text("En attente du second utilisateur...").fadeIn();
